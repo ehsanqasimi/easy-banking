@@ -1,0 +1,408 @@
+@import './variable';
+
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $default;
+    color: $DarkBlue;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    user-zoom: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+    header {
+        padding: 20px;
+        background-color: $White;
+        z-index: 10;
+        position: relative;
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            // padding: 10px;
+            position: relative;
+
+            ul {
+                position: absolute;
+                width: 100%;
+                top: 300%;
+                text-align: center;
+                line-height: 50px;
+                font-weight: 400;
+                display: none;
+                box-shadow: 0 0 1000px 10px black;
+                border-radius: 5px;
+                height: fit-content;
+                padding-block: 30px;
+                background-color: $White;
+                li{
+                    transition: .5s;
+                    &:hover{
+                        border-bottom: 4px solid $LimeGreen;
+                    }
+                }
+            }
+
+            .close {
+                display: none;
+            }
+
+            .invite {
+                display: none;
+                transition: .5s;
+                &:hover{
+                    opacity: .7;
+                }
+            }
+        }
+    }
+
+    .hero {
+        width: 100%;
+        background-image: url(./images/bg-intro-mobile.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        .phone-img {
+            width: 100%;
+            margin-top: -120px;
+        }
+
+        .data-hero {
+            text-align: center;
+            padding-inline: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 100px;
+
+            .title-hero {
+                font-weight: 400;
+                font-size: 3rem;
+            }
+
+            .par {
+                color: $GrayishBlue;
+            }
+
+            .invite {
+                display: flex;
+                width: 200px;
+                border-radius: 50px;
+                justify-content: center;
+                padding: 10px;
+                color: white;
+                background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+                transition: .5s;
+                &:hover{
+                    opacity: .8;
+                }
+            }
+        }
+    }
+
+    .why-us {
+        background-color: $LightGrayishBlue;
+        padding-bottom: 100px;
+
+        .feature-heading {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-inline: 30px;
+            padding-block: 40px;
+            gap: 30px;
+
+            .title {
+                font-size: 3rem;
+            }
+
+            .feature-par {
+                color: $GrayishBlue;
+            }
+        }
+
+        .features {
+            .feature {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding-inline: 30px;
+                padding-block: 40px;
+                gap: 30px;
+
+                .title {
+                    font-size: 1.3rem;
+                }
+
+                .feature-par {
+                    color: $GrayishBlue;
+                }
+            }
+        }
+
+
+    }
+
+    .articles {
+        padding: 90px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        color: $DarkBlue;
+        width: 100%;
+        background-color: $VeryLightGray;
+
+        .title {
+            font-size: 2rem;
+            text-align: center;
+
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 50px;
+
+            .card {
+                background-color: $White;
+
+                img {
+                    width: 100%;
+                    border-top-right-radius: 10px;
+                    border-top-left-radius: 10px;
+                }
+
+                .data {
+                    padding: 30px;
+                    gap: 10px;
+                    display: grid;
+
+                    .author {
+                        color: $GrayishBlue;
+                        font-size: 13px;
+                    }
+
+                    .article-title {
+                        font-size: 1.4rem;
+                        transition: all ease .5s;
+                        cursor: pointer;
+                        &:hover{
+                            color: $LimeGreen;
+                        }
+                    }
+
+                    .desc {
+                        color: $GrayishBlue;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: $DarkBlue;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-block: 30px;
+
+        .logo-icons {
+            img {
+                padding-bottom: 20px;
+            }
+        }
+
+        .button-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .copyright {
+                color: $GrayishBlue;
+                padding-top: 20px;
+            }
+
+            a {
+                display: flex;
+                width: 200px;
+                border-radius: 50px;
+                justify-content: center;
+                padding: 10px;
+                color: white;
+                background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+                transition: all ease .5s;
+                &:hover{
+                    opacity: .8;
+                }
+            }
+        }
+
+        .first-li,
+        .second-li {
+            color: $LightGrayishBlue;
+            font-weight: 300;
+            font-size: .8rem;
+            text-align: center;
+
+            li {
+                padding-block: 10px;
+                transition: all ease .5s;
+                cursor: pointer;
+                &:hover{
+                    color: $LimeGreen;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+@media screen and (min-width: 950px) {
+    .container {
+        header {
+
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-inline: 100px;
+                position: static;
+
+                ul {
+                    text-align: center;
+                    font-weight: 400;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: static;
+                    box-shadow: none;
+                    background-color: transparent;
+                    padding: 0;
+
+                    li {
+                        padding-inline: 20px;
+                        color: $GrayishBlue;
+                    }
+                }
+
+                .invite {
+                    display: flex;
+                    width: 200px;
+                    border-radius: 50px;
+                    justify-content: center;
+                    padding: 10px;
+                    color: white;
+                    background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+                }
+
+                .close {
+                    display: none;
+                }
+
+                .burger {
+                    display: none;
+                }
+            }
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: row-reverse;
+            background-image: url(./images/bg-intro-desktop.svg);
+            background-position: 680px -250px;
+            background-size: 80%;
+            justify-content: space-between;
+
+            .phone-img {
+                margin: -80px -80px;
+                width: 50%;
+            }
+
+            .data-hero {
+                width: 50%;
+                padding-inline: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .why-us {
+            padding: 100px;
+
+            .feature-heading {
+                align-items: flex-start;
+
+                .title {
+                    text-align: start;
+                }
+            }
+
+            .features {
+                display: flex;
+            }
+
+        }
+
+        .articles {
+            padding-inline: 100px;
+
+            .title {
+                text-align: left;
+            }
+
+            .cards {
+                flex-direction: row;
+            }
+        }
+
+        footer {
+            flex-direction: row;
+            justify-content: space-around;
+
+            .first-li,
+            .second-li {
+                text-align: left;
+            }
+
+            .logo-icons {
+                .icons {
+                    .icon {
+                        color: red;
+                        &:hover {
+                            fill: $LimeGreen;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

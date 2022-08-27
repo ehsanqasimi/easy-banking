@@ -1,0 +1,12 @@
+$(document).ready(()=>{
+    $(".burger").click(()=>{
+        $('.burger').hide();
+        $('.close').show();
+        $('ul').show();
+    })
+    $(".close").click(()=>{
+        $('.close').hide();
+        $('.burger').show();
+        $('ul').hide();
+    })
+})
